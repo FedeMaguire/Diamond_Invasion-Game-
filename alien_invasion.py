@@ -9,6 +9,9 @@ from button import Button
 from ship import Ship
 from bullet import Bullet
 from alien import Alien
+from background import Background
+
+backGround = Background('images/background.jpg', [0,0])
 
 class  AlienInvasion:
     """Overall class to manage game assets and behavior."""
@@ -66,7 +69,17 @@ class  AlienInvasion:
     def _check_play_button(self, mouse_pos):
         """Start a new game when the player clicks PLAY."""
         if self.play_button.rect.collidepoint(mouse_pos):
+            # Reset the game statics.
+            self.stats.reset_stats()
             self.stats.game_active = True
+
+            # Get rid of any remaining aliens and bullets.
+            self.aliens.empty()
+            self.bullets.empty()
+
+            # Create a new fleet and center the ship.
+            self._create_fleet()
+            self.ship.center_ship()
 
     def _check_keydown_events(self, event):
         """Respond to keypresses."""
@@ -189,6 +202,7 @@ class  AlienInvasion:
     def _update_screen(self):
         """Update images on the screen, and flip to the new screen."""
         self.screen.fill(self.settings.bg_color)
+        self.screen.blit(backGround.image, backGround.rect)
         self.ship.blitme()
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()

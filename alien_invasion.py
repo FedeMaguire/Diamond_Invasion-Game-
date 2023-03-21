@@ -13,7 +13,6 @@ from alien import Alien
 from background import Background
 
 
-backGround = Background('images/background.jpg', [0,0])
 
 class  AlienInvasion:
     """Overall class to manage game assets and behavior."""
@@ -33,9 +32,11 @@ class  AlienInvasion:
         self.stats = GameStats(self)
         self.sb = Scoreboard(self)
 
+
         self.ship = Ship(self)
         self.bullets = pygame.sprite.Group()
         self.aliens = pygame.sprite.Group()
+        self.background = Background()
 
         self._create_fleet()
 
@@ -214,7 +215,8 @@ class  AlienInvasion:
     def _update_screen(self):
         """Update images on the screen, and flip to the new screen."""
         self.screen.fill(self.settings.bg_color)
-        self.screen.blit(backGround.image, backGround.rect)
+        self.background.render(self.screen)
+        self.background.update(self.settings.background_speed)
         self.ship.blitme()
         for bullet in self.bullets.sprites():
             bullet.draw_bullet()

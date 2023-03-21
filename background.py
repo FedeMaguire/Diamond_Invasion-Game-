@@ -13,9 +13,9 @@ class Background(pygame.sprite.Sprite):
         self.rect = self.surf.get_rect(
             bottomleft=(0,self.screen_height)
         )
-        #Usamos 2 surface para hacer un buen loop del fondo
-        #Se mueven juntos y cuando uno desaparece de pantalla se mueve
-        #hasta abajo, y asi se van repitiendo
+        # Used 2 surfaces to generate a better loop for background
+        # they move toguether to create a beter flow
+        
         self.surf2 = self.surf
         self.rect2 = self.surf2.get_rect(
             bottomleft=self.rect.topleft

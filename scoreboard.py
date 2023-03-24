@@ -16,7 +16,7 @@ class Scoreboard:
 
         # Font settings for scoring information
         self.text_color = (235, 143, 255)
-        self.font = pygame.font.Font("gameFont.ttf", 24)
+        self.font = pygame.font.Font("gameFont.ttf", 20)
 
         # Prepare the initial score images.
         self.prep_score()
@@ -75,8 +75,10 @@ class Scoreboard:
     def prep_ships(self):
         """Show how many ships are left."""
         self.ships = Group()
-        for ship_number in range(self.stats.ships_left):
+        for ship_number in range(self.stats.ships_left + 1):
             ship = Ship(self.ai_game)
+            ship.image = pygame.image.load('images/ship2.png')
+            ship.rect = ship.image.get_rect()
             ship.rect.x = 10 + ship_number * ship.rect.width
             ship.rect.y = 10
             self.ships.add(ship)

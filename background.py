@@ -4,8 +4,8 @@ from settings import Settings
 class Background(pygame.sprite.Sprite):
 
     def __init__(self):
-        self.screen_width = 1280
-        self.screen_height = 800
+        self.screen_width = 1920
+        self.screen_height = 1080
         self.surf = pygame.image.load("images/Purple Nebula 1 - 1024x1024.png")
         background_width = self.screen_width
         background_height = (background_width/self.surf.get_width())*self.surf.get_height()

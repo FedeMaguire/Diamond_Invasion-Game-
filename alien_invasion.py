@@ -41,7 +41,16 @@ class  AlienInvasion:
         self._create_fleet()
 
         # Make the PLay button.
-        self.play_button = Button(self, "PLAY")
+        self.play_button = Button(self, '-DIAMOND INVASION-')
+
+    def _render_exit_message(self):
+        font = pygame.font.Font("gameFont.ttf", 16)
+        text_color = (255, 155, 235)
+        text = font.render("Q to exit", True, text_color)
+        text_rect = text.get_rect()
+        text_rect.right = self.settings.screen_width - 20
+        text_rect.top = 110
+        self.screen.blit(text, text_rect)
     
     def run_game(self):
         """Start the main loop for the game."""
@@ -107,7 +116,7 @@ class  AlienInvasion:
             self.fire_bullet()
 
     def _check_keyup_events(self, event):
-        """Respond ti key releases."""     
+        """Respond to key releases."""     
         if event.key == pygame.K_RIGHT:
             self.ship.moving_right = False
         elif event.key == pygame.K_LEFT:
@@ -254,6 +263,9 @@ class  AlienInvasion:
         # Draw the play button if the game is inactive.
         if not self.stats.game_active:
             self.play_button.draw_button()
+
+        # Render the exit message
+        self._render_exit_message()
 
         pygame.display.flip()
 

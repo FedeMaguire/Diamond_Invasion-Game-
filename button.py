@@ -8,14 +8,15 @@ class Button:
         self.screen_rect = self.screen.get_rect()
 
         # Set the dimensions and properties of the button.
-        self.width, self.height = 180, 60
+        self.width, self.height = 400, 80
         self.button_color = (42, 72, 102)
-        self.text_color = (255, 255, 255)
-        self.font = pygame.font.Font("gameFont.ttf", 36)
+        self.text_color = (255, 155, 235)
+        self.font = pygame.font.Font("gameFont.ttf", 38)
 
         # Build the button's rect object and center it.
         self.rect = pygame.Rect(0, 0, self.width, self.height)
         self.rect.center = self.screen_rect.center
+        self.rect.y += 100  # Add this line to lower the position by 40 pixels
 
         # The button messege needs to be prepared only once.
         self._prep_msg(msg)

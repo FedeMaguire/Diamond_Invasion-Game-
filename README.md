@@ -20,7 +20,7 @@ Diamond Invasion is developed using an object-oriented programming (OOP) approac
 - Upgraded graphics for a visually appealing adventure.
 
 <p align="center">
-    <img src="https://github.com/FedeMaguire/alien_invasion/blob/master/images/Screenshot.jpg?raw=true" width=80%>
+    <img src="https://github.com/FedeMaguire/alien_invasion/blob/master/images/Screenshot.jpg?raw=true" width100%>
 </p>
 
 # Requeriments

@@ -1,4 +1,4 @@
-# Diamond Invasion (alien_invasion)
+# :video_game::space_invader: Diamond Invasion (alien_invasion)
 ## Diamond Invasion is a classic arcade-style game, inspired by the iconic Galaga, built using Python 3 and powered by the Pygame library.
 # Overview
 

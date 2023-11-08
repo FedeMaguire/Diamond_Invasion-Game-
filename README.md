@@ -1,9 +1,9 @@
 # Diamond Invasion (alien_invasion)
-## Diamond Invasion is a classic arcade-style game, inspired in the iconic Galaga, built using Python 3 and powered by the Pygame library.
+## Diamond Invasion is a classic arcade-style game, inspired by the iconic Galaga, built using Python 3 and powered by the Pygame library.
 
-<div style="text-align:center">
-    <img src="https://github.com/FedeMaguire/alien_invasion/blob/master/images/gameplay%20capture.gif" width=640>
-</div>
+<p align="center">
+  <img src="https://github.com/FedeMaguire/alien_invasion/blob/master/images/gameplay%20capture.gif" width=640>
+</p>
 
 # Overview
 This project was inspired by the projects section of the "Python Crash Course" book, the basic concept were followed and new features were added. Eenhancements include a scrolling background and revamped graphics.
@@ -19,9 +19,9 @@ Diamond Invasion is developed using an object-oriented programming (OOP) approac
 - Engaging scrolling background for an immersive experience.
 - Upgraded graphics for a visually appealing adventure.
 
-<div style="text-align:center">
-    <mg src="https://github.com/FedeMaguire/alien_invasion/blob/master/images/Screenshot.jpg?raw=true" width=1200>
-</div>
+<p align="center">
+    <img src="https://github.com/FedeMaguire/alien_invasion/blob/master/images/Screenshot.jpg?raw=true" width=80%>
+</p>
 
 # Requeriments
 - Python (https://www.python.org/) 3.x +
